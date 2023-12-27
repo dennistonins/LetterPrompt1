@@ -47,6 +47,16 @@ Contact Information: ${contactInfo}
     document.getElementById('outputLetter').value = letter;
 });
 
+document.getElementById('agency').addEventListener('change', function() {
+    var agencySelection = document.getElementById('agency').value;
+    var agencyDetails = document.getElementById('agencyDetails');
+    if (agencySelection === 'yes') {
+        agencyDetails.style.display = 'block';
+    } else {
+        agencyDetails.style.display = 'none';
+    }
+});
+
 document.getElementById('copyButton').addEventListener('click', function() {
     var copyText = document.getElementById('outputLetter').value;
 
