@@ -48,7 +48,11 @@ Contact Information: ${contactInfo}
 });
 
 document.getElementById('copyButton').addEventListener('click', function() {
-    var copyText = document.getElementById('outputLetter');
-    copyText.select();
-    document.execCommand('copy');
+    var copyText = document.getElementById('outputLetter').value;
+
+    navigator.clipboard.writeText(copyText).then(function() {
+        console.log('Text successfully copied to clipboard');
+    }).catch(function(err) {
+        console.error('Could not copy text: ', err);
+    });
 });
