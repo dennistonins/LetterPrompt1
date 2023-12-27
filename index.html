@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Letter Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="letterForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="clients">Number of Clients:</label>
+        <input type="number" id="clients" name="clients" required>
+
+        <label for="agency">Are you representing an agency? (yes/no):</label>
+        <input type="text" id="agency" name="agency" required>
+
+        <label for="agents">Number of Agents in Your Agency:</label>
+        <input type="number" id="agents" name="agents" required>
+
+        <label for="location">Your Location:</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="experience">Years in Business:</label>
+        <input type="number" id="experience" name="experience" required>
+
+        <label for="impact">Specific Impact on Your Business and Clients:</label>
+        <textarea id="impact" name="impact" placeholder="Describe specific examples or scenarios highlighting the impact of the CMS rule on your business, employees, and beneficiaries." required></textarea>
+
+        <label for="benefits">Selection of Benefits from FMOs:</label>
+        <textarea id="benefits" name="benefits" placeholder="List specific benefits you receive from FMOs, such as technology, quoting software, call recording technology, and explain why these are critical to your operation." required></textarea>
+
+        <label for="communityNeeds">Your Community's Unique Needs:</label>
+        <textarea id="communityNeeds" name="communityNeeds" placeholder="Describe any specific aspects of your community that make the role of FMOs particularly vital, like a high number of Medicare beneficiaries or unique demographic factors." required></textarea>
+
+        <label for="contactInfo">Your Contact Information:</label>
+        <input type="text" id="contactInfo" name="contactInfo" required>
+
+        <button type="submit">Generate Letter</button>
+    </form>
+
+    <textarea id="outputLetter" readonly></textarea>
+    <button id="copyButton">Copy Letter</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
