@@ -2,11 +2,11 @@
 document.getElementById('letterForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Collecting form data
     var name = document.getElementById('name').value;
     var clients = document.getElementById('clients').value;
     var agency = document.getElementById('agency').value;
-    var agents = document.getElementById('agents').value;
+    var agencyName = agency === 'yes' ? document.getElementById('agencyName').value : '';
+    var agents = agency === 'yes' ? document.getElementById('agents').value : '';
     var location = document.getElementById('location').value;
     var experience = document.getElementById('experience').value;
     var impact = document.getElementById('impact').value;
@@ -14,7 +14,6 @@ document.getElementById('letterForm').addEventListener('submit', function(event)
     var communityNeeds = document.getElementById('communityNeeds').value;
     var contactInfo = document.getElementById('contactInfo').value;
 
-    // Generating the letter with user data appended
     var letter = `Task: Compose a professional letter addressed to senators and congressmen.
 
 Objective: The letter should address the issue of CMS's proposed rule to eliminate administrative payments from insurance companies to Field Marketing Organizations (FMOs), which could significantly impact the support FMOs provide.
@@ -34,8 +33,7 @@ Style: The letter should be formal and persuasive, clearly articulating the impo
 User Input:
 Name: ${name}
 Number of Clients: ${clients}
-Representing Agency: ${agency}
-Number of Agents in Agency: ${agents}
+Representing Agency: ${agency === 'yes' ? 'Yes, Agency Name: ' + agencyName + ', Number of Agents: ' + agents : 'No'}
 Location: ${location}
 Years in Business: ${experience}
 Specific Impact: ${impact}
