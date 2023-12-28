@@ -9,8 +9,9 @@
 <body>
     <header>
         <h1>Letter to Congress Ai Prompt Generator</h1>
-        <p>Create a customized Ai prompt to compose a letter to your senators and congressmen regarding important legislative issues.</p>
+        <p>Create an Ai prompt for a customized letter to your senators and congressmen regarding CMS's latest proposed rules.</p>
     </header>
+
     <form id="letterForm">
         <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
@@ -18,11 +19,19 @@
         <label for="clients">Number of Clients:</label>
         <input type="number" id="clients" name="clients" required>
 
-        <label for="agency">Are you representing an agency? (yes/no):</label>
-        <input type="text" id="agency" name="agency" required>
+        <label for="agency">Are you representing an agency?</label>
+        <select id="agency" name="agency">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
 
-        <label for="agents">Number of Agents in Your Agency:</label>
-        <input type="number" id="agents" name="agents" required>
+        <div id="agencyDetails" style="display: none;">
+            <label for="agencyName">Name of Agency:</label>
+            <input type="text" id="agencyName" name="agencyName">
+
+            <label for="agents">Number of Agents in Your Agency:</label>
+            <input type="number" id="agents" name="agents">
+        </div>
 
         <label for="location">Your Location:</label>
         <input type="text" id="location" name="location" required>
@@ -31,13 +40,13 @@
         <input type="number" id="experience" name="experience" required>
 
         <label for="impact">Specific Impact on Your Business and Clients:</label>
-        <textarea id="impact" name="impact" placeholder="Describe specific examples or scenarios highlighting the impact of the CMS rule on your business, employees, and beneficiaries." required></textarea>
+        <textarea id="impact" name="impact" required></textarea>
 
         <label for="benefits">Selection of Benefits from FMOs:</label>
-        <textarea id="benefits" name="benefits" placeholder="List specific benefits you receive from FMOs, such as technology, quoting software, call recording technology, and explain why these are critical to your operation." required></textarea>
+        <textarea id="benefits" name="benefits" required></textarea>
 
         <label for="communityNeeds">Your Community's Unique Needs:</label>
-        <textarea id="communityNeeds" name="communityNeeds" placeholder="Describe any specific aspects of your community that make the role of FMOs particularly vital, like a high number of Medicare beneficiaries or unique demographic factors." required></textarea>
+        <textarea id="communityNeeds" name="communityNeeds" required></textarea>
 
         <label for="contactInfo">Your Contact Information:</label>
         <input type="text" id="contactInfo" name="contactInfo" required>
@@ -49,16 +58,18 @@
     <button id="copyButton">Copy Prompt</button>
 
     <div class="instructions">
-	        <p>Instructions:</p>
-	        <ol>
-	            <li>Fill in the form and click 'Generate Letter' to create your letter.</li>
-	            <li>Click 'Copy Letter' to copy the text to your clipboard.</li>
-	            <li>Use the copied text to interact with ChatGPT. Click the link below to start:</li>
-	        </ol>
-	        <a href="https://chat.openai.com/chat" target="_blank">Go to ChatGPT</a>
+        <p>Instructions:</p>
+        <ol>
+            <li>Fill in the form and click 'Generate Prompt' to create your letter.</li>
+            <li>Click 'Copy Prompt' to copy the text to your clipboard.</li>
+            <li>Use the copied text to interact with ChatGPT. Click the link below to start:</li>
+        </ol>
+        <a href="https://chat.openai.com/chat" target="_blank">Go to ChatGPT</a><br><br>
+        <a href="https://copilot.microsoft.com/?culture=en-us&country=us" target="_blank">Go to Microsoft Copilot</a>
+
     </div>
 
- <footer>
+    <footer>
         <p>We value your privacy. No personal information is stored.</p>
     </footer>
 
